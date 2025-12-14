@@ -1,0 +1,18 @@
+:root { --bg:#0f172a; --card:#1e293b; --text:#f8fafc; --blue:#38bdf8; --green:#4ade80; --red:#ef4444; }
+body { background:var(--bg); color:var(--text); font-family:'Segoe UI',sans-serif; text-align:center; margin:0; padding:20px; }
+.container { max-width:800px; margin:0 auto; }
+.card { background:var(--card); padding:20px; border-radius:15px; border:1px solid #334155; margin-bottom:20px; }
+h1 { color:var(--blue); margin:0; } .subtitle { color:#94a3b8; font-size:0.9rem; margin-bottom:20px; }
+.temp-box { font-size:3.5rem; font-weight:bold; color:var(--green); margin:10px 0; }
+.badge { padding:5px 15px; border-radius:20px; font-weight:bold; background:rgba(255,255,255,0.1); }
+.bg-alarm { background:rgba(239,68,68,0.2); color:var(--red); border:1px solid var(--red); animation:blink 1s infinite; }
+.bg-ok { background:rgba(74,222,128,0.2); color:var(--green); border:1px solid var(--green); }
+@keyframes blink { 50%{opacity:0.5} }
+.chart-box { height:300px; }
+.input-group { display:flex; justify-content:center; gap:15px; margin:15px 0; }
+input { background:#0f172a; border:1px solid #334155; color:#fff; padding:10px; border-radius:5px; text-align:center; width:80px; }
+label { display:block; font-size:0.8rem; color:#94a3b8; margin-bottom:5px; }
+button { padding:12px 25px; border-radius:8px; border:none; font-weight:bold; cursor:pointer; }
+.btn-save { background:var(--blue); width:100%; } .btn-save:hover { background:#fff; }
+.btn-pdf { background:#334155; color:var(--blue); border:1px solid var(--blue); } .btn-pdf:hover { background:var(--blue); color:#000; }
+.btn-group { display:flex; gap:10px; justify-content:center; }
