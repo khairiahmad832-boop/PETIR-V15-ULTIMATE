@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETIR V15 DASHBOARD</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ PETIR V15 PRO-MAX</h1>
+            <div class="subtitle">Industrial Temperature Monitoring System</div>
+        </header>
+        
+        <div class="card">
+            <h3>SUHU PROSES (MID)</h3>
+            <div id="mainTemp" class="temp-box">--.- °C</div>
+            <div id="sysStatus"><span class="badge">Connecting...</span></div>
+            <div id="configInfo" style="margin-top:10px; color:#64748b; font-size:0.8rem;">Target: --</div>
+        </div>
+
+        <div class="card chart-box">
+            <canvas id="liveChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3>⚙️ PENGATURAN BATAS SUHU</h3>
+            <div class="input-group">
+                <div><label>Max</label><input type="number" id="inputHigh"></div>
+                <div><label>Min</label><input type="number" id="inputLow"></div>
+            </div>
+            <button onclick="saveConfig()" class="btn-save">SIMPAN PERUBAHAN</button>
+        </div>
+
+        <div class="card">
+            <h3>📄 LAPORAN PRODUKSI</h3>
+            <div class="btn-group">
+                <button onclick="downloadPDF(5)" class="btn-pdf">5 Jam</button>
+                <button onclick="downloadPDF(8)" class="btn-pdf">8 Jam (Shift)</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
